@@ -23,5 +23,14 @@ const app = new Vue({
     switchStatus(todo) {
       todo.done = !todo.done;
     },
+    removeTodo(todo) {
+      let todos = this.todos;
+      console.log("he");
+      for (const task of todos) {
+        if (task.id === todo.id) {
+          todos.pop(todo);
+        }
+      }
+    },
   },
 });

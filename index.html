@@ -15,6 +15,7 @@
             <th class="id">ID</th>
             <th class="comment">タスク</th>
             <th class="state">状態</th>
+            <th class="delete">-</th>
           </tr>
         </thead>
         <tbody>
@@ -27,6 +28,7 @@
               </button>
               <button v-else v-on:click="switchStatus(todo)">not done</button>
             </td>
+            <td><button v-on:click="removeTodo(todo)">削除</button></td>
           </tr>
         </tbody>
       </table>
