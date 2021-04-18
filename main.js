@@ -1,6 +1,7 @@
 const app = new Vue({
   el: "#app",
   data: {
-    message: "hello",
+    // ToDoリストの空の配列
+    todos: [],
   },
 });
