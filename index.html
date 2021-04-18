@@ -6,11 +6,14 @@
   </head>
   <body>
     <div id="app">
+      <label for="input-todo">新規タスクを投稿</label>
+      <input id="input-todo" type="text" ref="comment" />
+      <button>投稿</button>
       <table>
         <thead>
           <tr>
             <th class="id">ID</th>
-            <th class="comment">コメント</th>
+            <th class="comment">タスク</th>
             <th class="state">状態</th>
           </tr>
         </thead>
