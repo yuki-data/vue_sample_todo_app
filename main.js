@@ -10,6 +10,7 @@ const app = new Vue({
     displayOptions: [
       { value: 0, label: "全て" },
       { value: 1, label: "doneのみ" },
+      { value: 2, label: "not doneのみ" },
     ],
     currentDisplayOptions: 0,
   },
@@ -36,6 +37,15 @@ const app = new Vue({
           todos.pop(todo);
         }
       }
+    },
+  },
+  computed: {
+    filterTodos() {
+      return this.todos.filter(function (todo) {
+        return this.currentDisplayOptions === 0
+          ? true
+          : this.currentDisplayOptions == (todo.done ? 1 : 2);
+      }, this);
     },
   },
 });
