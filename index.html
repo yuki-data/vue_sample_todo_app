@@ -12,15 +12,13 @@
             <th class="id">ID</th>
             <th class="comment">コメント</th>
             <th class="state">状態</th>
-            <th class="button"></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>3,000</td>
-            <td>3,000</td>
-            <td>3,000</td>
-            <td>3,000</td>
+          <tr v-for="todo in todos">
+            <td>{{todo.id}}</td>
+            <td>{{todo.content}}</td>
+            <td><button>{{todo.state}}</button></td>
           </tr>
         </tbody>
       </table>
