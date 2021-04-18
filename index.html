@@ -22,8 +22,10 @@
             <td>{{todo.id}}</td>
             <td>{{todo.content}}</td>
             <td>
-              <button v-if="todo.done">done</button>
-              <button v-else>not done</button>
+              <button v-if="todo.done" v-on:click="switchStatus(todo)">
+                done
+              </button>
+              <button v-else v-on:click="switchStatus(todo)">not done</button>
             </td>
           </tr>
         </tbody>

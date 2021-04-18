@@ -20,5 +20,8 @@ const app = new Vue({
       this.todos.push(todo);
       this.$refs.newtask.value = "";
     },
+    switchStatus(todo) {
+      todo.done = !todo.done;
+    },
   },
 });
