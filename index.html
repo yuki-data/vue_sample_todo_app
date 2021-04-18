@@ -21,7 +21,10 @@
           <tr v-for="todo in todos">
             <td>{{todo.id}}</td>
             <td>{{todo.content}}</td>
-            <td><button>{{todo.state}}</button></td>
+            <td>
+              <button v-if="todo.done">done</button>
+              <button v-else>not done</button>
+            </td>
           </tr>
         </tbody>
       </table>
