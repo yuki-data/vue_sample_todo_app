@@ -6,9 +6,22 @@
   </head>
   <body>
     <div id="app">
-      <label for="input-todo">新規タスクを投稿</label>
-      <input id="input-todo" type="text" ref="newtask" />
-      <button v-on:click="submitNewTask">投稿</button>
+      <div>
+        <label for="input-todo">新規Todoを投稿</label>
+        <input id="input-todo" type="text" ref="newtask" />
+        <button v-on:click="submitNewTask">投稿</button>
+      </div>
+      <div>
+        <span>表示するtodoを絞り込む</span>
+        <label for="filter-todo" v-for="option in displayOptions">
+          <input
+            type="radio"
+            name="filter-todo"
+            v-model="currentDisplayOptions"
+            v-bind:value="option.value"
+          />{{option.label}}
+        </label>
+      </div>
       <table>
         <thead>
           <tr>

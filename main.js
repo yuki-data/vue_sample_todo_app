@@ -7,6 +7,11 @@ const app = new Vue({
       { id: 2, content: "vueチュートリアル", done: true },
       { id: 3, content: "nuxtチュートリアル", done: false },
     ],
+    displayOptions: [
+      { value: 0, label: "全て" },
+      { value: 1, label: "doneのみ" },
+    ],
+    currentDisplayOptions: 0,
   },
   methods: {
     submitNewTask() {
