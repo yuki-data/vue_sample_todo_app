@@ -1,18 +1,20 @@
 const app = new Vue({
   el: "#app",
-  data: {
-    // ToDoリストの空の配列
-    todos: [
-      { id: 1, content: "rspec勉強", done: false },
-      { id: 2, content: "vueチュートリアル", done: true },
-      { id: 3, content: "nuxtチュートリアル", done: false },
-    ],
-    displayOptions: [
-      { value: 0, label: "全て" },
-      { value: 1, label: "doneのみ" },
-      { value: 2, label: "not doneのみ" },
-    ],
-    currentDisplayOptions: 0,
+  data() {
+    return {
+      // ToDoリストの空の配列
+      todos: [
+        { id: 1, content: "rspec勉強", done: false },
+        { id: 2, content: "vueチュートリアル", done: true },
+        { id: 3, content: "nuxtチュートリアル", done: false },
+      ],
+      displayOptions: [
+        { value: 0, label: "全て" },
+        { value: 1, label: "doneのみ" },
+        { value: 2, label: "not doneのみ" },
+      ],
+      currentDisplayOptions: 0,
+    };
   },
   methods: {
     submitNewTask() {
